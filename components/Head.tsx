@@ -10,14 +10,17 @@ const Head = () => {
     <div className="hero">
       <div className="flex-1 pt-36 padding-x">
         <h1 className="hero__title">
-          Take a look, search - buy your dream car
+          Take a look,
+          <br /> Explore - <br />
+          Buy your dream car
         </h1>
         <p className="hero__subtitle">
           New and used cars with better condition in Sri Lanka
         </p>
         <Custom_Button
-          title="click here To Explore Cars"
-          containerStyle="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-800 hover:border-transparent rounded mt-10"
+          btnType="button"
+          title="Click Here To Explore Cars"
+          containerStyle="bg-transparent hover:bg-orange-500 text-orange-700 font-semibold hover:text-white py-2 px-4 border border-orange-800 hover:border-transparent rounded mt-10"
           handleClick={handleScroll}
         />
       </div>

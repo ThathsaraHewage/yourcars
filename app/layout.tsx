@@ -1,7 +1,7 @@
 import "./globals.css";
-import type { Metadata } from "next";
+import { Footer, Navbar } from "@/components";
 
-export const metadata: Metadata = {
+export const metadata = {
   title: "YOUR CAR",
   description: "bring home your dream car",
 };
@@ -13,7 +13,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="relative">{children}</body>
+      <body className="relative">
+        <Navbar />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }
