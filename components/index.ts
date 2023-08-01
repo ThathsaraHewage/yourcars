@@ -6,6 +6,7 @@ import Search_Bar from "./Search_Bar";
 import Custom_Filter from "./Custom_Filter";
 import Search_Manufacturer from "./Search_Manufacturer";
 import CarCard from "./CarCard";
+import CarDetails from "./CarDetails";
 
 export {
   Head,
@@ -16,4 +17,5 @@ export {
   Navbar,
   Footer,
   CarCard,
+  CarDetails,
 };
