@@ -43,7 +43,7 @@ const Search_Manufacturer = ({
             className="search-manufacturer__input"
             displayValue={(item: string) => item}
             onChange={(event) => setQuery(event.target.value)}
-            placeholder="Bentley..."
+            placeholder="Make..."
           />
 
           <Transition

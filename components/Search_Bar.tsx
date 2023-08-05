@@ -29,7 +29,7 @@ const Search_Bar = () => {
     e.preventDefault();
 
     if (manufacturer.trim() === "" && model.trim() === "") {
-      return alert("Please provide some input");
+      return alert("Please fill your search !");
     }
 
     updateSearchParams(model.toLowerCase(), manufacturer.toLowerCase());
@@ -83,7 +83,7 @@ const Search_Bar = () => {
           name="model"
           value={model}
           onChange={(e) => setModel(e.target.value)}
-          placeholder="Tiguan..."
+          placeholder="Model..."
           className="searchbar__input"
         />
         <SearchButton otherClasses="sm:hidden" />
