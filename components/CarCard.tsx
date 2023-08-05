@@ -5,7 +5,7 @@ import Image from "next/image";
 
 import { CarProps } from "@/types";
 import Custom_Button from "./Custom_Button";
-import { calculateCarRent } from "@/utilities";
+import { calculateCarRent, generateCarImageUrl } from "@/utilities";
 import CarDetails from "./CarDetails";
 
 interface CarCardProps {
@@ -30,10 +30,10 @@ const CarCard = ({ car }: CarCardProps) => {
           /LKR.
         </span>
       </p>
-      {/* TODO: change this to load images dyanamically */}
+
       <div className="relative w-full h-40 my-3 object-contain">
         <Image
-          src="/hero.png"
+          src={generateCarImageUrl(car)}
           alt="car image"
           fill
           priority
