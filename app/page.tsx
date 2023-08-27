@@ -1,4 +1,5 @@
 import { Custom_Filter, Head, Search_Bar, CarCard } from "@/components";
+import Show_more from "@/components/Show_more";
 import { fuels, yearsOfProduction } from "@/constants/constants";
 import { HomeProps } from "@/types";
 import { fetchCars } from "@/utilities";
@@ -32,12 +33,15 @@ export default async function Home({ searchParams }: HomeProps) {
 
         {!isDataEmpty ? (
           <section>
-            {" "}
             <div className="home__cars-wrapper">
               {allCars?.map((car) => (
                 <CarCard car={car} />
               ))}
             </div>
+            <Show_more
+              pageNo={(searchParams.limit || 10) / 10}
+              isShowMore={(searchParams.limit || 10) > allCars.length}
+            />
           </section>
         ) : (
           <div className="home__error-container">
